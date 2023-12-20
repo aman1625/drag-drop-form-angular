@@ -1,0 +1,26 @@
+<div class="container" (drop)="onDrop($event)" (dragover)="onDragOver($event)">
+    <div  class="div1">
+    <div class="sidebar">
+      <app-side-nav></app-side-nav>
+    </div></div>
+    <div class="div2">
+  
+      <div class="form-container">
+        <form [formGroup]="form">
+          <div *ngFor="let field of formFields" class="form-field">
+            <label>{{ field.type }}</label>
+            <input type="text" formControlName="{{ field.type.toLowerCase().replace(' ', '_') }}">
+          </div>
+        </form>
+      <div *ngIf="!formFields.length" class="side-blank-container">
+        <p>Drag fields from the sidebar to create your form!</p>
+      </div>
+        <div *ngIf="formFields.length" class="buttons-container">
+          <button (click)="onSubmit('exportJSON')">Export JSON</button>
+          <button *ngIf="formJSON" (click)="pushDataToForm()">Import JSON</button>
+          <button (click)="onSubmit('saveData')">Submit</button>
+        </div>
+      </div>
+      
+  </div>  </div>
+  

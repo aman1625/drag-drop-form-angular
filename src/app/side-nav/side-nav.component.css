@@ -1,0 +1,17 @@
+/* sidebar.component.css */
+
+.sidebar {
+    width: 200px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+  }
+  
+  .draggable-item {
+    margin-bottom: 5px;
+    padding: 5px;
+    cursor: move;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  

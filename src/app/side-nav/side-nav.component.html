@@ -1,0 +1,9 @@
+<div class="sidebar">
+    <div *ngFor="let component of availableComponents"
+         (dragstart)="onDragStart($event, component)"
+         draggable="true"
+         class="draggable-item">
+      {{ component }}
+    </div>
+  </div>
+  
